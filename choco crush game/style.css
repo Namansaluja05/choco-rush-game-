@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #3e2723, #795548);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    gap: 5px;
+    perspective: 800px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.choco {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(20deg) rotateX(10deg);
+    transition: transform 0.2s ease, top 0.3s ease-in;
+    position: relative;
+    border-radius: 10px;
+}
+
+.choco:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.selected {
+    border: 3px solid white;
+}
